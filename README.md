@@ -1,68 +1,33 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Connect Four App
 
-## Available Scripts
+## Ryan Boris<ryan.boris@gmail.com>
 
-In the project directory, you can run:
+### Brainstorming
 
-### `npm start`
+_The bare minimum required for this application to be considered "Connect Four" is the first goal, then additional features can follow..._
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+#### What?
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+_Begin with largest perspective and decompose in order to move to smaller and smaller perspectives._
+_What is needed for this game: features, data, resources...?_
 
-### `npm test`
+- A rectangular game board.
+- A pattern of circular "holes" which represent possible locations players can place a token.
+- Two circular tokens that are differentiated by some property to indicate player ownership.
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+#### How?
 
-### `npm run build`
+_Work from largest to smaller perspectives._
+_How does the game progress, how does the user interact, how do things evolve...?_
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+- The game must indicate a way to begin playing.
+- The game must welcome a user and prompt for user information.
+- The game must allow for two players, one player is the user, and the other player can be another user or the computer.
+- A user is decided, at random, to make the first move.
+- A move consists of a user clicking a permitted location on the game board.
+- Once an approved move is made, the next player can now select a permitted location to place a token.
+- Each player, alternatively, continues to place a token when it is their turn.
+- The game, effectively, comes to an end if:
+  - a player connects four of their tokens as four points in a line
+  - all the locations are filled with no player making a connection of four tokens which ends in a draw
+  - the timer elapses (maybe)
