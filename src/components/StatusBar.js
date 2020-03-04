@@ -1,5 +1,5 @@
 import React, { useContext } from 'react'
-import GameContext from './GameContext'
+import GameContext from '../store/GameContext'
 
 const GameStatus = props => {
   const { state } = useContext(GameContext)

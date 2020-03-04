@@ -1,7 +1,7 @@
 import React, { useContext } from 'react'
 import Hole from './Hole'
-import GameStatus from './GameStatus'
-import GameContext from './GameContext'
+import StatusBar from './StatusBar'
+import GameContext from '../store/GameContext'
 
 import './styles/Board.css'
 
@@ -24,7 +24,7 @@ const Board = () => {
       {state.holes.map((hole, idx) => (
         <Hole key={idx} hole={hole} />
       ))}
-      <GameStatus playerOneIds={playerOneIds} playerTwoIds={playerTwoIds} />
+      <StatusBar playerOneIds={playerOneIds} playerTwoIds={playerTwoIds} />
     </div>
   )
 }
